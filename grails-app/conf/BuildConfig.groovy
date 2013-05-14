@@ -11,6 +11,9 @@ grails.project.source.level = 1.6
 //   run: [maxMemory:1024, minMemory:64, debug:false, maxPerm:256]
 //]
 
+
+grails.server.port.http = 8010
+
 grails.project.dependency.resolution = {
     // inherit Grails' default dependencies
     inherits("global") {
