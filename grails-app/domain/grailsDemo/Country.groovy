@@ -1,7 +1,7 @@
 package grailsDemo
 
 class Country {
-
+	static hasMany = [cities: City]
 	String name
 	String iso2digitCode
 	String iso3digitCode
