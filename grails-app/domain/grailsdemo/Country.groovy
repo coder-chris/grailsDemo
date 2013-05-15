@@ -12,4 +12,8 @@ class Country {
 		iso3digitCode(blank: false, maxSize:3)
 	}
 	
+	String toString(){
+		name + " (" + id + ")"
+	}
+	
 }

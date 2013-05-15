@@ -8,4 +8,8 @@ class City {
     static constraints = {
 		name(blank: false, maxSize: 100)
     }
+	
+	String toString(){
+		name + " (" + id + ")"
+	}
 }
