@@ -12,6 +12,11 @@ class CountryController {
 		redirect(action: "list")
 	}
 	
+	def countryCount(){
+		println "There are " + Country.count() + " countries."
+		render "There are " + Country.count() + " countries." 
+	}
+	
     def index() {
         redirect(action: "list", params: params)
     }

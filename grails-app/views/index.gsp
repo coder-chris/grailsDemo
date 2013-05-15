@@ -3,6 +3,7 @@
 	<head>
 		<meta name="layout" content="main"/>
 		<title>Welcome to Grails</title>
+		<g:javascript library="jquery"/>
 		<style type="text/css" media="screen">
 			#status {
 				background-color: #eee;
@@ -119,6 +120,19 @@
 				</ul>
 			</div>
 
+			<div id="ajaxExample" role="navigation">
+				<h2>Ajax Example</h2>
+				<ul>
+					<div id="updateMe">This div will be dynamically updated</div>
+					
+				
+					<g:formRemote name="myForm" 
+					              update="updateMe"
+					              url="[controller: 'country', action: 'countryCount']">
+		    			<input type="submit" value="Count Countries" />
+					</g:formRemote>
+				</ul>
+			</div>
 
 			<div id="controller-list" role="navigation">
 				<h2>Available Controllers:</h2>
