@@ -3,9 +3,15 @@ package grailsdemo
 import org.springframework.dao.DataIntegrityViolationException
 
 class CountryController {
-
+	def fileImportService
+	
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
+	def initialImport(){
+		fileImportService.importCountryFile()
+		redirect(action: "list")
+	}
+	
     def index() {
         redirect(action: "list", params: params)
     }
