@@ -1,4 +1,5 @@
 Grails Demo: Countries and Cities
+=================================
 
 This project was started in order to give an overview and demo of Groovy and Grails. It is intended to be a minimum Grails project which demonstrates some of the key features of Grails. This project can be used as a basis for further extensions so that it is possible to test out and learn further features of Groovy and Grails.
 
