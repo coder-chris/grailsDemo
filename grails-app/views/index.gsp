@@ -109,6 +109,17 @@
 			   content you may choose. Below is a list of controllers that are currently deployed in this application,
 			   click on each to execute its default action:</p>
 
+			<div id="importData" role="navigation">
+				<h2>Import Data</h2>
+				<ul>
+					<g:form controller="country">
+						<g:actionSubmit value="Import Countries" action="initialImport" />
+					</g:form>
+			
+				</ul>
+			</div>
+
+
 			<div id="controller-list" role="navigation">
 				<h2>Available Controllers:</h2>
 				<ul>
