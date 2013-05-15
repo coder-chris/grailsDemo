@@ -1,9 +1,9 @@
-package grailsDemo
+package grailsdemo
 
 class City {
-
-	String name
 	static belongsTo  = [country: Country]
+	String name
+	
 	
     static constraints = {
 		name(blank: false, maxSize: 100)

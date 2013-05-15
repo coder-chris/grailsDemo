@@ -1,4 +1,4 @@
-package grailsDemo
+package grailsdemo
 
 class Country {
 	static hasMany = [cities: City]

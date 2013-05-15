@@ -1,4 +1,4 @@
-<%@ page import="grailsDemo.City" %>
+<%@ page import="grailsdemo.City" %>
 <!DOCTYPE html>
 <html>
 	<head>

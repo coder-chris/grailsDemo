@@ -1,5 +1,5 @@
 
-<%@ page import="grailsDemo.City" %>
+<%@ page import="grailsdemo.City" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -28,6 +28,15 @@
 					<span id="name-label" class="property-label"><g:message code="city.name.label" default="Name" /></span>
 					
 						<span class="property-value" aria-labelledby="name-label"><g:fieldValue bean="${cityInstance}" field="name"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${cityInstance?.country}">
+				<li class="fieldcontain">
+					<span id="country-label" class="property-label"><g:message code="city.country.label" default="Country" /></span>
+					
+						<span class="property-value" aria-labelledby="country-label"><g:link controller="country" action="show" id="${cityInstance?.country?.id}">${cityInstance?.country?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>

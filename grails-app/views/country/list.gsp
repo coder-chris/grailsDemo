@@ -1,5 +1,5 @@
 
-<%@ page import="grailsDemo.Country" %>
+<%@ page import="grailsdemo.Country" %>
 <!DOCTYPE html>
 <html>
 	<head>

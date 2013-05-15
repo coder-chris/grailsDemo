@@ -1,5 +1,5 @@
 
-<%@ page import="grailsDemo.City" %>
+<%@ page import="grailsdemo.City" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -26,6 +26,8 @@
 					
 						<g:sortableColumn property="name" title="${message(code: 'city.name.label', default: 'Name')}" />
 					
+						<th><g:message code="city.country.label" default="Country" /></th>
+					
 					</tr>
 				</thead>
 				<tbody>
@@ -33,6 +35,8 @@
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
 						<td><g:link action="show" id="${cityInstance.id}">${fieldValue(bean: cityInstance, field: "name")}</g:link></td>
+					
+						<td>${fieldValue(bean: cityInstance, field: "country")}</td>
 					
 					</tr>
 				</g:each>

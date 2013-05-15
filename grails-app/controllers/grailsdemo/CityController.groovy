@@ -1,4 +1,4 @@
-package grailsDemo
+package grailsdemo
 
 import org.springframework.dao.DataIntegrityViolationException
 

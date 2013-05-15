@@ -1,5 +1,5 @@
 
-<%@ page import="grailsDemo.Country" %>
+<%@ page import="grailsdemo.Country" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -46,6 +46,17 @@
 					<span id="iso3digitCode-label" class="property-label"><g:message code="country.iso3digitCode.label" default="Iso3digit Code" /></span>
 					
 						<span class="property-value" aria-labelledby="iso3digitCode-label"><g:fieldValue bean="${countryInstance}" field="iso3digitCode"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${countryInstance?.cities}">
+				<li class="fieldcontain">
+					<span id="cities-label" class="property-label"><g:message code="country.cities.label" default="Cities" /></span>
+					
+						<g:each in="${countryInstance.cities}" var="c">
+						<span class="property-value" aria-labelledby="cities-label"><g:link controller="city" action="show" id="${c.id}">${c?.encodeAsHTML()}</g:link></span>
+						</g:each>
 					
 				</li>
 				</g:if>
