@@ -134,6 +134,22 @@
 				</ul>
 			</div>
 
+			<div id="ajaxExample2" role="navigation">
+				<h2>Ajax Example2</h2>
+				<ul>
+					<div id="updateMe2">This div will be dynamically updated</div>
+					
+				
+					<g:formRemote name="myForm" 
+					              update="updateMe2"
+					              url="[controller: 'country', action: 'countryLookup',
+					                    params: [param1: 'extraInfo1', param2: 'extraInfo2']]">
+					    Enter 2 digit ISO code, eg GB: <input name="code" type="text" />
+		    			<input type="submit" value="Find Country" />
+					</g:formRemote>
+				</ul>
+			</div>
+			
 			<div id="controller-list" role="navigation">
 				<h2>Available Controllers:</h2>
 				<ul>

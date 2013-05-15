@@ -17,6 +17,11 @@ class CountryController {
 		render "There are " + Country.count() + " countries." 
 	}
 	
+	def countryLookup(){
+		def countryInstance = Country.findByIso2digitCode(params.code)
+		render (template: "countryLookup", model: [countryInstance: countryInstance])
+	}
+	
     def index() {
         redirect(action: "list", params: params)
     }
