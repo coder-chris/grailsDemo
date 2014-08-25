@@ -75,6 +75,8 @@ You should then have the following versions of software installed:
 edit grails-app/conf/BuildConfig.groovy add line:
     
     grails.server.port.http = 8010
+   
+Start the server...
 
     $ run-app
 
