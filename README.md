@@ -138,7 +138,8 @@ add the following method to the class grails-app/domain/grailsDemo/City.groovy a
 
 NOTE: there's no need to restart the server here. The changes are available directly
 
-$ create-service grailsDemo.FileImportService 
+    $ create-service grailsDemo.FileImportService 
+
 and add the following:
 
     class FileImportService {
@@ -159,7 +160,7 @@ and add the following:
 grails-app/conf/BuildConfig.groovy
 add line (at line 64 as part of the compile time dependencies)
 
-    compile ':csv:0.3.1'
+    compile ":csv:0.3.1"
 
 in file grails-app/controllers/grailsdemo/CountryController.groovy add this as the 1st line in class...
 
