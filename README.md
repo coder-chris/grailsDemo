@@ -111,14 +111,6 @@ add the following text to the class rails-app/domain/grailsDemo/Country.groovy
  	}
 
 
-#If there are problems then
-
-    $ exit
-    $ grails compile 
-    $ grails clean-all
-    $ grails
-[http://stackoverflow.com/questions/21838403/grails-2-3-5-generate-all-doesnt-exist-but-its-in-the-documentation]()
-
 #Generate code via the Grails scaffolding...
 
     $ generate-all grailsDemo.Country
@@ -128,14 +120,14 @@ add the following text to the class rails-app/domain/grailsDemo/Country.groovy
 add the following method to the classrails-app/domain/grailsDemo/Country.groovy 
 
     String toString(){
-         name  " + (" + id + ")"
+         name  + " (" + id + ")"
     }
 
 
 add the following method to the class grails-app/domain/grailsDemo/City.groovy after the line 'String name'
 
     String toString(){
-        name  " + (" + id + ")"
+        name + " (" + id + ")"
     }
 
 NOTE: there's no need to restart the server here. The changes are available directly
@@ -176,7 +168,19 @@ then add this method
      }
 
 create the directory grails-app/files/
-and copy the Countries.csv file in
+and copy the [https://github.com/coder-chris/grailsDemo/blob/master/Countries.csv](Countries.csv) file in to the directory
+
+
+#If there are problems then (This forces Grails to pull in the CSV library)
+
+    $ stop-app
+    $ exit
+    $ grails compile 
+    $ grails clean-all
+    $ grails
+    $ start-app
+[http://stackoverflow.com/questions/21838403/grails-2-3-5-generate-all-doesnt-exist-but-its-in-the-documentation]()
+
 
 [http://localhost:8010/grailsDemo/country/initialImport]()
 
@@ -259,21 +263,5 @@ And then just before the closing body tag in grails-app/views/index.gsp
 				</ul>
 			</div>
 
-grails-app/views/index.gsp
 
-           <div id="ajaxExample2" role="navigation">
-               <h2>Ajax Example2</h2>
-               <ul>
-                   <div id="updateMe2">This div will be dynamically updated</div>
-                  
-               
-                   <g:formRemote name="myForm" 
-                                 update="updateMe2"
-                                 url="[controller: 'country', action: 'countryLookup',
-                                       params: [param1: 'extraInfo1', param2: 'extraInfo2']]">
-                       Enter 2 digit ISO code, eg GB: <input name="code" type="text" />
-                       <input type="submit" value="Find Country" />
-                   </g:formRemote>
-               </ul>
-           </div>
 
